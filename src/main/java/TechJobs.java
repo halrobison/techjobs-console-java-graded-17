@@ -56,15 +56,17 @@ public class TechJobs {
 
                 // How does the user want to search (e.g. by skill or employer)
                 String searchField = getUserSelection("Search by:", columnChoices);
+                String lowerSearchField = searchField.toLowerCase();
 
                 // What is their search term?
                 System.out.println("\nSearch term:");
                 String searchTerm = in.nextLine();
+                String lowerSearchTerm = searchTerm.toLowerCase();
 
                 if (searchField.equals("all")) {
-                    printJobs(JobData.findByValue(searchTerm));
+                    printJobs(JobData.findByValue(lowerSearchTerm));
                 } else {
-                    printJobs(JobData.findByColumnAndValue(searchField, searchTerm));
+                    printJobs(JobData.findByColumnAndValue(lowerSearchField, lowerSearchTerm));
                 }
             }
         }
