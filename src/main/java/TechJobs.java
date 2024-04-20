@@ -118,8 +118,27 @@ public class TechJobs {
     }
 
     // Print a list of jobs
-    private static void printJobs(ArrayList<HashMap<String, String>> someJobs) {
 
-        System.out.println("printJobs is not implemented yet");
+    private static void printJobs(ArrayList<HashMap<String, String>> someJobs) {
+    // GOAL 1 INSTRUCTIONS: Iterate over array list, and ALSO grab all the entries in the hash map.
+        // will need 2 for loops. Outside for loop going over arraylist, inside loop going over hashmap
+        // set a breakpoint here, use run with debug, list (1, then 0)
+        // copy and paste from hashmap exercises in text!!
+        // check tests for formatting of print:
+
+        // loop
+        if (someJobs.isEmpty()) {
+            System.out.print("No Results");
+        } else {
+            for (HashMap<String, String> map : someJobs) {
+                System.out.println("*****");
+                for (String key : map.keySet()) {
+                    String value = map.get(key);
+                    System.out.println(key + ": " + value);
+                }
+                System.out.println("*****");
+                System.out.print("\n");
+            }
+        }
     }
 }
