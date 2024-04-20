@@ -131,13 +131,13 @@ public class TechJobs {
             System.out.print("No Results");
         } else {
             for (HashMap<String, String> map : someJobs) {
+                System.out.print("\n");
                 System.out.println("*****");
                 for (String key : map.keySet()) {
                     String value = map.get(key);
                     System.out.println(key + ": " + value);
                 }
                 System.out.println("*****");
-                System.out.print("\n");
             }
         }
     }
